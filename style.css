@@ -1,85 +1,41 @@
 /* Estilos generales */
-/* General */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
-  }
-  
-  header {
+}
+
+header {
     background-color: #2e86de;
     color: white;
     padding: 20px;
     text-align: center;
-  }
-  header {
-    background-color: #2e86de;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    display: flex;               /* Flexbox para centrar el contenido */
+    justify-content: center;     /* Centra horizontalmente */
+    align-items: center;         /* Centra verticalmente */
+    flex-direction: column;      /* Asegura que los elementos dentro se apilen verticalmente */
+    height: auto;                /* Altura automática */
+    width: 100%;                 /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box;      /* Asegura que el padding no afecte el ancho */
 }
 
-/* Nueva clase para alinear el contenido */
-.header-content {
-    display: flex;
-    justify-content: space-between; /* separa el nombre y el botón */
-    align-items: center; /* centra verticalmente */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Título */
-.header-content h1 {
-    font-size: 24px;
-    margin: 0;
-}
-
-/* Botón de WhatsApp en el header */
-.whatsapp-header-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25d366;
-    color: white;
-    font-size: 36px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.whatsapp-header-btn:hover {
-    background-color: #128c7e;
-    transform: scale(1.1);
-}
-
-/* Para que el contenido no quede tapado por el header */
-body {
-    padding-top: 100px;
-}
-
-  .banner {
+.banner {
     text-align: center;
     padding: 20px;
     background-color: #dff9fb;
-  }
-  
-  /* Productos */
-  .productos {
+}
+
+/* Productos */
+.productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 40px;
     justify-items: center;
-  }
-  
-  .producto {
+}
+
+.producto {
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -93,61 +49,61 @@ body {
     text-align: center;
     padding: 20px;
     cursor: pointer; /* Opcional: mano al pasar */
-  }
-  
-  /* Efecto al pasar el mouse */
-  .producto:hover {
+}
+
+/* Efecto al pasar el mouse */
+.producto:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-  }
-  
-  /* Imagen de producto */
-  .producto img {
+}
+
+/* Imagen de producto */
+.producto img {
     width: 100%;
     height: auto;
     max-height: 250px;
     object-fit: contain;
     margin-bottom: 15px;
     transition: transform 0.4s ease;
-  }
-  
-  /* Zoom en imagen al pasar mouse */
-  .producto:hover img {
+}
+
+/* Zoom en imagen al pasar mouse */
+.producto:hover img {
     transform: scale(1.07);
-  }
-  
-  /* Nombre del producto */
-  .nombre-producto h3 {
+}
+
+/* Nombre del producto */
+.nombre-producto h3 {
     font-size: 1.2rem;
     margin: 10px 0;
-  }
-  
-  /* Precio */
-  .precio {
+}
+
+/* Precio */
+.precio {
     font-size: 1.1rem;
     font-weight: bold;
     color: #27ae60;
     margin-top: auto;
     padding-top: 10px;
-  }
-  
-  /* Footer */
-  footer {
+}
+
+/* Footer */
+footer {
     background-color: #2e86de;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-  }
-  
-  .redes-footer {
+}
+
+.redes-footer {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .btn-red-social {
+}
+
+.btn-red-social {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,35 +115,25 @@ body {
     font-size: 28px;
     transition: background-color 0.3s, transform 0.3s;
     text-decoration: none;
-  }
-  
-  .btn-red-social:hover {
+}
+
+.btn-red-social:hover {
     transform: scale(1.1);
-  }
-  
-  .btn-red-social.facebook {
+}
+
+.btn-red-social.facebook {
     background-color: #3b5998;
-  }
-  
-  .btn-red-social.instagram {
+}
+
+.btn-red-social.instagram {
     background: radial-gradient(circle at 30% 107%, 
       #fdf497 0%, #fdf497 5%, 
       #fd5949 45%, #d6249f 60%, 
       #285AEB 90%);
-  }
-  
-  
-  
-  
- 
-  
-  .btn-red-social:hover {
-    transform: scale(1.05);
-  }
-  
-  
-  /* Botón de WhatsApp */
-  .whatsapp-btn {
+}
+
+/* Botón de WhatsApp */
+.whatsapp-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -199,22 +145,32 @@ body {
     text-align: center;
     z-index: 1000;
     transition: background-color 0.3s;
-  }
-  
-  .whatsapp-btn:hover {
+}
+
+.whatsapp-btn:hover {
     background-color: #128c7e;
-  }
-  
-  /* Responsive */
-  @media (max-width: 900px) {
+}
+
+/* Responsive */
+@media (max-width: 900px) {
     .productos {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas en pantallas medianas */
     }
-  }
-  
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
+    /* Se adapta a una columna en móviles */
     .productos {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        padding: 20px; /* Ajuste del padding para dispositivos pequeños */
     }
-  }
-  
+
+    .producto {
+        max-width: 100%; /* Hace que el producto ocupe todo el ancho disponible */
+        padding: 10px; /* Reduce el padding para que los productos no se vean tan grandes */
+    }
+
+    header {
+        padding: 15px; /* Ajusta el padding del encabezado en pantallas pequeñas */
+    }
+}
